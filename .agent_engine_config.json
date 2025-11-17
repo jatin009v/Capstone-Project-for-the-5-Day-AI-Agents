@@ -1,0 +1,30 @@
+{
+  "app_name": "researchforge",
+  "display_name": "ResearchForge AI Agent",
+  "description": "Autonomous multi-agent system for automated literature reviews (ResearchForge AI)",
+  "branding": {
+    "project_name": "ResearchForge AI",
+    "version": "0.1.0"
+  },
+  "agent_service_config": {
+    "max_retries": 3,
+    "max_agent_iterations": 8
+  },
+  "model_inference_config": {
+    "model": "gemini-2.0-flash",
+    "max_output_tokens": 4096,
+    "temperature": 0.2
+  },
+  "session_config": {
+    "session_service_type": "IN_MEMORY",
+    "ttl_seconds": 7200
+  },
+  "events_compaction_config": {
+    "max_events": 200,
+    "strategy": "SUMMARIZE"
+  },
+  "observability_config": {
+    "enabled": true,
+    "log_level": "INFO"
+  }
+}
